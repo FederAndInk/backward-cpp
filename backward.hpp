@@ -4148,7 +4148,7 @@ private:
                         const ResolvedTrace::SourceLoc &source_loc,
                         void *addr = nullptr) {
     os << indent << "Source \"" << source_loc.filename << ":"
-       << source_loc.line << "\", in " << source_loc.function;
+       << source_loc.line << ":" << source_loc.col << "\", in " << source_loc.function;
 
     if (address && addr != nullptr) {
       os << " [" << addr << "]";
